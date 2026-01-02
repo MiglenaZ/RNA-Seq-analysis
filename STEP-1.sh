@@ -1,6 +1,6 @@
+#!/usr/bin/env bash
 #-------------------------------------------
 # Kraken2 analysis with the sbatch.kraken script
-vi sbatch.kraken
 sbatch sbatch.kraken
 
 #-------------------------------------------
@@ -24,7 +24,6 @@ done
 
 #-------------------------------------------
 # Keep only homo sapiens reads with sbatch.filter_reads script
-vi sbatch.filter_reads
 sbatch sbatch.filter_reads
 
 for f in <OUTPUT_DIR_OF_FILTERED_READS>/*_clean_R*.fq; do
@@ -32,11 +31,9 @@ for f in <OUTPUT_DIR_OF_FILTERED_READS>/*_clean_R*.fq; do
     gzip "$f"
 done
 
-vi fix_fasta_to_fastq.sh
 bash fix_fasta_to_fastq.sh
 
 #-------------------------------------------
 # nf-core/rna-seq with rna-seq.sbatch
-vi rna-seq.sbatch
 sbatch rna-seq.sbatch
 
