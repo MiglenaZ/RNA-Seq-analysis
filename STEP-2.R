@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 # R script for DE analysis, GO and KEGG analyses with the R package 'clusterProfiler', visualizations for the most expressed genes (Volcano graph, GO and KEGG graphs)
 # (download and) open file <OUTPUT_DIR_OF_RNA-SEQ.SBATCH>/star_salmon/deseq2_qc/deseq2.dds.RData
 
