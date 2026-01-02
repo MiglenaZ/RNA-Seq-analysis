@@ -8,7 +8,7 @@ mkdir -p "$OUTPUT_DIR"
 
 echo "Converting FASTA-like files in $INPUT_DIR to FASTQ.gz format..."
 
-for f in ${INPUT_DIR}/LN229_T4_clean_R*.fq.gz; do
+for f in ${INPUT_DIR}/*_clean_R*.fq.gz; do
     [ -e "$f" ] || continue  # Skip if no match
     base=$(basename "$f" .fq.gz)
     out="${OUTPUT_DIR}/${base}_fixed.fq.gz"
