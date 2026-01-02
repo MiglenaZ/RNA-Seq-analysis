@@ -9,7 +9,7 @@ conda activate env_nf
 # fasta downloaded GRCh38.p14.genome.fa.gz
 
 nextflow run nf-core/rnaseq -r 3.21.0 \
-  --input <SAMPLESHEET_AFTER_FIX_FASTA_TO_FASTQ.SH> \
+  --input <PATH_TO_SAMPLESHEET_AFTER_FIX_FASTA_TO_FASTQ.SH> \
   --outdir <OUTPUT_DIR> \
   --gtf <FULL_PATH_TO_GTF_FILE> \
   --fasta <FULL_PATH_TO_FASTA_FILE> \
