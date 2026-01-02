@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #-------------------------------------------
 # Kraken2 analysis with the sbatch.kraken script
-sbatch sbatch.kraken
+sbatch kraken.sbatch
 
 #-------------------------------------------
 # Krona visualization
@@ -24,7 +24,7 @@ done
 
 #-------------------------------------------
 # Keep only homo sapiens reads with sbatch.filter_reads script
-sbatch sbatch.filter_reads
+sbatch filter_reads.sbatch
 
 for f in <OUTPUT_DIR_OF_FILTERED_READS>/*_clean_R*.fq; do
     echo "Compressing $f"
